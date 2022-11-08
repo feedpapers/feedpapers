@@ -38,7 +38,7 @@ res.to_csv("test.csv")
 
 print(res)
 print(res["summary"])
-res = feedpapers.filter_limno(res)["papers"]
+res = feedpapers.filter_subject(res)["papers"]
 print(res)
 print(res["title"])
 toots = res["title"] + ". " + res["link"]

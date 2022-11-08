@@ -23,7 +23,7 @@ for p in statuses:
     res.append({"title": p.text, "summary": p.text, "id": p.id})
 res = pd.DataFrame(res)
 
-res_limno = lp.filter_limno(res)
+res_limno = lp.filter_subject(res)
 [statuses[i] for i in res_limno["papers"]["index"]]
 
 # retweet

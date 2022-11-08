@@ -3,13 +3,13 @@ import pkg_resources
 
 import feedpapers as lp
 
-# help(lp.filter_limno)
+# help(lp.filter_subject)
 
 # ---
 
 d = {"title": ["good stuff"], "summary": ["asdf"]}
 df = pd.DataFrame(data=d)
-test = lp.filter_limno(df)
+test = lp.filter_subject(df)
 
 # ---
 
@@ -22,7 +22,7 @@ d = {
     ],
 }
 df = pd.DataFrame(data=d)
-test = lp.filter_limno(df)
+test = lp.filter_subject(df)
 
 print(list(test["filter_against"]))
 
