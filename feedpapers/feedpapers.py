@@ -46,8 +46,8 @@ def toot_split(toot):
     return [title, dc_source, prism_url]
 
 
-def filter_limno(df):
-    r"""Filter limnology themed papers from a pandas DataFrame.
+def filter_subject(df):
+    r"""Filter subject themed papers from a pandas DataFrame.
     :param df: pandas DataFrame with 'title' and 'summary' columns
     """
 
@@ -215,7 +215,7 @@ def get_papers(to_csv=False, log_path="log.csv", posts=None):
             ]
         ]
 
-    res_limno = filter_limno(res)["papers"]
+    res_limno = filter_subject(res)["papers"]
 
     titles = res_limno["title"].copy()
     titles[titles.str.len() > 159] = (
@@ -225,17 +225,17 @@ def get_papers(to_csv=False, log_path="log.csv", posts=None):
     if os.path.exists(log_path):
         log = log[[isinstance(x, str) for x in log["title"]]]
         res_limno = res_limno[~titles.str.lower().isin(map(str.lower, log["title"]))]
-        res_limno = filter_limno(res_limno)["papers"]
+        res_limno = filter_subject(res_limno)["papers"]
 
         # filter out punctuation missing matches to log
         titles = res_limno["title"].copy()
         titles_with_periods = titles.copy() + "."
         is_in_log = ~titles_with_periods.str.lower().isin(map(str.lower, log["title"]))
-        res_limno = filter_limno(res_limno[is_in_log])["papers"]
+        res_limno = filter_subject(res_limno[is_in_log])["papers"]
 
         titles = res_limno["title"].copy()
         titles_with_qmarks = titles.copy() + "?"
-        res_limno = filter_limno(
+        res_limno = filter_subject(
             res_limno[
                 ~titles_with_qmarks.str.lower().isin(map(str.lower, log["title"]))
             ]

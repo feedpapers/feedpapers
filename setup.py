@@ -1,4 +1,4 @@
-"""A package to monitor limnology RSS feeds and tweet new articles."""
+"""A package to monitor journal RSS feeds and tweet new articles."""
 
 import setuptools
 
@@ -10,7 +10,7 @@ setuptools.setup(
     version="1.0.3",
     author="Jemma Stachelek",
     author_email="stachel2@msu.edu",
-    description="A package to monitor limnology RSS feeds and tweet new \
+    description="A package to monitor journal RSS feeds and tweet new \
                 articles",
     long_description=long_description,
     long_description_content_type="text/markdown",

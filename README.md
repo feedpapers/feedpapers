@@ -2,11 +2,11 @@
 
 ![pytest](https://github.com/jsta/feedpapers/workflows/pytest/badge.svg)
 
-Code to monitor [limnology RSS feeds](feedpapers/journals.csv) and [tweet](https://twitter.com/limno_papers) new articles.
+Code to monitor [journal RSS feeds](feedpapers/journals.csv) and [tweet](https://twitter.com/limno_papers) new articles.
 
 ## Scope
 
-The keywords and journal choices herein aim to focus on limnology (the study of inland waters). They are also meant to exclude related topics such as fisheries ecology, water resources engineering, estuarine/marine ecology, ecological genetics, and the study of specific "inland seas" like the North American Great Lakes. Feel free to weigh-in in the repository issues on scope recommendations! 
+The scope of the feed is defined by entires in keywords.csv 
 
 ## Usage
 
