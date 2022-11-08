@@ -32,12 +32,12 @@ jobs:
         pip install -e .    
     - name: Run
       run: |
-        limnopapers --tweet
+        feedpapers --tweet
     - name: Commit and push if changed
       run: |-
         git diff
-        git config --global user.email "limnopapers-bot@example.com"
-        git config --global user.name "limnopapers-bot"
+        git config --global user.email "feedpapers-bot@example.com"
+        git config --global user.name "feedpapers-bot"
         git add log.csv
         git commit -m "Updated log" || exit 0
         git push

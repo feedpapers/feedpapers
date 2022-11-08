@@ -2,19 +2,19 @@
 
 Query papers that came out prior to today without tweeting:
 
-`python limnopapers/limnopapers.py`
+`python feedpapers/feedpapers.py`
 
 Query papers that came out prior to today and open in browser:
 
-`python limnopapers/limnopapers.py --browser`
+`python feedpapers/feedpapers.py --browser`
 
 Manually approve tweeting of papers that came out prior to today:
 
-`python limnopapers/limnopapers.py --interactive`
+`python feedpapers/feedpapers.py --interactive`
 
 Unsupervised tweeting of papers that came out prior to today:
 
-`python limnopapers/limnopapers.py --tweet`
+`python feedpapers/feedpapers.py --tweet`
 
 ## Setup
 
@@ -28,7 +28,7 @@ Unsupervised tweeting of papers that came out prior to today:
 
 ```
 crontab -e 
-0 15 * * * python /path/to/limnopapers.py
+0 15 * * * python /path/to/feedpapers.py
 ```
 
 ### Python dependencies
@@ -41,9 +41,9 @@ Install these to the activated environment with:
 
 ## Contributing
 
-* Please help by adding missing journals to [limnopapers/journals.csv](limnopapers/journals.csv) or filing an [issue](https://github.com/jsta/limnopapers/issues)
+* Please help by adding missing journals to [journals.csv](journals.csv) or filing an [issue](https://github.com/jsta/feedpapers/issues)
 
-* Filtering keywords are located in [limnopapers/keywords.csv](limnopapers/keywords.csv).
+* Filtering keywords are located in [keywords.csv](keywords.csv).
 
 ## Prior art
 

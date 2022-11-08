@@ -1,8 +1,8 @@
-# limnopapers
+# feedpapers
 
-![pytest](https://github.com/jsta/limnopapers/workflows/pytest/badge.svg)
+![pytest](https://github.com/jsta/feedpapers/workflows/pytest/badge.svg)
 
-Code to monitor [limnology RSS feeds](limnopapers/journals.csv) and [tweet](https://twitter.com/limno_papers) new articles.
+Code to monitor [limnology RSS feeds](feedpapers/journals.csv) and [tweet](https://twitter.com/limno_papers) new articles.
 
 ## Scope
 
@@ -12,23 +12,23 @@ The keywords and journal choices herein aim to focus on limnology (the study of 
 
 Query papers that came out prior to today without tweeting:
 
-`limnopapers`
+`feedpapers`
 
 Query papers that came out prior to today and open in browser:
 
-`limnopapers --browser`
+`feedpapers --browser`
 
 Manually approve tweeting of papers that came out prior to today:
 
-`limnopapers --interactive`
+`feedpapers --interactive`
 
 Unsupervised tweeting of papers that came out prior to today:
 
-`limnopapers --tweet`
+`feedpapers --tweet`
 
 "Reset" the tweet log:
 ```shell
-limnopapers --ignore_all
+feedpapers --ignore_all
 # manually delete old log entries
 ```
 
@@ -44,7 +44,7 @@ limnopapers --ignore_all
 
 ```
 crontab -e 
-0 15 * * * python /path/to/limnopapers.py
+0 15 * * * python /path/to/feedpapers.py
 ```
 
 ### Python dependencies
@@ -57,9 +57,9 @@ Install these to the activated environment with:
 
 ## Contributing
 
-* Please help by adding missing journals to [limnopapers/journals.csv](limnopapers/journals.csv) or filing an [issue](https://github.com/jsta/limnopapers/issues)
+* Please help by adding missing journals to [feedpapers/journals.csv](feedpapers/journals.csv) or filing an [issue](https://github.com/jsta/feedpapers/issues)
 
-* Filtering keywords are located in [limnopapers/keywords.csv](limnopapers/keywords.csv).
+* Filtering keywords are located in [feedpapers/keywords.csv](feedpapers/keywords.csv).
 
 ## Prior art
 

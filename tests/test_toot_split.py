@@ -1,5 +1,5 @@
-import limnopapers.limnopapers as lp
-import limnopapers.utils as utils
+import feedpapers.feedpapers as lp
+import feedpapers.utils as utils
 
 
 def test_toot_split():

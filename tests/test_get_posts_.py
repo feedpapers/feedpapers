@@ -1,9 +1,9 @@
 # pytest -s tests/test_get_posts.py --ignore_cache
 
 import feedparser
-import limnopapers.limnopapers as lp
+import feedpapers.feedpapers as lp
 
-import limnopapers.utils as utils
+import feedpapers.utils as utils
 
 
 cache_path = "fixtures/test_get_posts_.json"

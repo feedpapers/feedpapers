@@ -1,4 +1,4 @@
-import limnopapers.utils as utils
+import feedpapers.utils as utils
 
 
 def test_internet():

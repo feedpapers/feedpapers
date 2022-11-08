@@ -3,7 +3,7 @@
 
 import argparse
 import argcomplete
-from limnopapers import limnopapers as lp
+from feedpapers import feedpapers as lp
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--tweet", default=False, action="store_true")

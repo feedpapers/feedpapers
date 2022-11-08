@@ -6,10 +6,10 @@ import pandas as pd
 import pytest
 
 import importlib.util
-spec = importlib.util.spec_from_file_location("limnopapers",
-                                              "limnopapers/limnopapers.py")
-limnopapers = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(limnopapers)
+
+spec = importlib.util.spec_from_file_location("feedpapers", "feedpapers/feedpapers.py")
+feedpapers = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(feedpapers)
 
 url = "https://www.tandfonline.com/feed/rss/ulrm20"
 posts = []
@@ -25,27 +25,26 @@ res = pd.DataFrame(posts)
 # res = res.drop(columns = ["summary"])
 # res = res.rename(columns = {"description_encoded": "summary"})
 
-res.filter(items = ["updated"])
+res.filter(items=["updated"])
 
 
 def test_fields():
-    has_published = len(set(list(res.columns)).
-                        intersection(['title', 'link'])) == 2
-    has_updated = len(set(list(res.columns)).
-                      intersection(['title', 'link'])) == 2
+    has_published = len(set(list(res.columns)).intersection(["title", "link"])) == 2
+    has_updated = len(set(list(res.columns)).intersection(["title", "link"])) == 2
     assert has_published or has_updated
+
 
 res.to_csv("test.csv")
 
 print(res)
-print(res['summary'])
-res = limnopapers.filter_limno(res)['papers']
+print(res["summary"])
+res = feedpapers.filter_limno(res)["papers"]
 print(res)
-print(res['title'])
-toots = res['title'] + ". " + res['link']
+print(res["title"])
+toots = res["title"] + ". " + res["link"]
 
 toots.__class__
-toots.sample(frac = 1)
+toots.sample(frac=1)
 
 for toot in toots:
     print(toot)

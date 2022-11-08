@@ -1,4 +1,4 @@
-import limnopapers.utils as utils
+import feedpapers.utils as utils
 
 
 posts = [
@@ -38,8 +38,8 @@ utils.save_dict_to_file(dt_nested, "tests/test_data.json")
 
 # --- exploring feedparser results structure ---
 
-# import limnopapers.limnopapers as lp
-# import limnopapers.utils as utils
+# import feedpapers.feedpapers as lp
+# import feedpapers.utils as utils
 
 # test = utils.load_dict_from_file("fixtures/test_get_posts_.json")
 # test_posts = test["entries"][1:3]  # test["entries"] is a list of dict objects

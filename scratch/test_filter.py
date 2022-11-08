@@ -1,7 +1,7 @@
 import pandas as pd
 import pkg_resources
 
-import limnopapers as lp
+import feedpapers as lp
 
 # help(lp.filter_limno)
 

@@ -1,8 +1,8 @@
 import os
 import pandas as pd
 
-import limnopapers.utils as utils
-import limnopapers.limnopapers as lp
+import feedpapers.utils as utils
+import feedpapers.feedpapers as lp
 
 
 def test_logging():

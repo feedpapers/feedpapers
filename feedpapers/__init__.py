@@ -1,2 +1,2 @@
-from .limnopapers import limnotoots
-from .limnopapers import filter_limno
+from .feedpapers import limnotoots
+from .feedpapers import filter_limno

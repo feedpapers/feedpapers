@@ -7,7 +7,7 @@ avg_likes_2019
 config.py
 dashboard.md
 index.html
-limnopapers.egg-info/
+feedpapers.egg-info/
 test.csv
 test_limno.csv
 test_today.csv
