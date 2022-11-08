@@ -31,7 +31,7 @@ def url_ok(url):
 
 
 def test_urls():
-    rawrss = pd.read_csv(pkg_resources.resource_filename("limnopapers", "journals.csv"))
+    rawrss = pd.read_csv("journals.csv")
     url_statuses = []
     for i in range(len(rawrss.index)):
         url_statuses.append(url_ok(rawrss["rawrss"][i]))

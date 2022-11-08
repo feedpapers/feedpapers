@@ -28,13 +28,13 @@ print(list(test["filter_against"]))
 
 # ---
 
-keywords = pd.read_csv(pkg_resources.resource_filename("limnopapers", "keywords.csv"))
+keywords = pd.read_csv("keywords.csv")
 filter_for = keywords["filter_for"].tolist()
 filter_for = [x for x in filter_for if str(x) != "nan"]
 filter_against = keywords["filter_against"].tolist()
 
 
-test = pd.read_csv(pkg_resources.resource_filename("limnopapers", "keywords.csv"))
+test = pd.read_csv("keywords.csv")
 for item in test["filter_against"].tolist():
     print(type(item))
 

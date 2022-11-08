@@ -52,9 +52,7 @@ def filter_limno(df):
     :param df: pandas DataFrame with 'title' and 'summary' columns
     """
 
-    keywords = pd.read_csv(
-        pkg_resources.resource_filename("limnopapers", "keywords.csv")
-    )
+    keywords = pd.read_csv("keywords.csv")
     filter_for = keywords["filter_for"].tolist()
     filter_for = [x for x in filter_for if str(x) != "nan"]
     filter_for = [x for x in filter_for if str(x) != " "]
@@ -174,7 +172,7 @@ def get_posts():
         raise Exception("limnopapers requires an internet connection.")
 
     # https://stackoverflow.com/questions/45701053/get-feeds-from-feedparser-and-import-to-pandas-dataframe
-    rawrss = pd.read_csv(pkg_resources.resource_filename("limnopapers", "journals.csv"))
+    rawrss = pd.read_csv("journals.csv")
 
     # sort rawrss by increasing journal name nchar length for pretty printing
     rawrss.index = rawrss["title"].str.len()
