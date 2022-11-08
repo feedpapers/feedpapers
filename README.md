@@ -6,7 +6,7 @@ Code to monitor [journal RSS feeds](feedpapers/journals.csv) and [tweet](https:/
 
 ## Scope
 
-The scope of the feed is defined by entires in keywords.csv 
+The scope of the feed is defined by entries in keywords.csv 
 
 ## Usage
 
