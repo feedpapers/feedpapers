@@ -11,13 +11,12 @@ from colorama import Fore
 from colorama import init
 from colorama import Style
 import argparse
-import pkg_resources
 import re
 
 init(autoreset=True)
 
 sys.path.append(".")
-import limnopapers.utils as utils
+import feedpapers.utils as utils
 
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parentdir = os.path.dirname(currentdir)
@@ -169,7 +168,7 @@ def get_posts_(title, url=None, feed_dict=None):
 def get_posts():
     # check for internet
     if not utils.internet():
-        raise Exception("limnopapers requires an internet connection.")
+        raise Exception("feedpapers requires an internet connection.")
 
     # https://stackoverflow.com/questions/45701053/get-feeds-from-feedparser-and-import-to-pandas-dataframe
     rawrss = pd.read_csv("journals.csv")
@@ -262,10 +261,10 @@ def limnotoots(
     log_path="log.csv",
 ):
     r"""Filter limnology themed papers from a pandas DataFrame.
-    :param tweet: boolean. Post tweets of limnopapers
+    :param tweet: boolean. Post tweets of feedpapers
     :param interactive: boolean. Ask for approval before tweeting.
     :param to_csv: boolean. Save output to csv for debugging.
-    :param browser: boolean. Open limnopapers in browser tabs.
+    :param browser: boolean. Open feedpapers in browser tabs.
     :param ignore_all: boolean. Write all toots to log, don't tweet.
     :param data: pd DataFrame to manually pass get_papers data
     :param log_path: path to log file

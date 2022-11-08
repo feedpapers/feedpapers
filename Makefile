@@ -1,8 +1,8 @@
 run:
-	limnopapers --interactive
+	feedpapers --interactive
 
 ignore:
-	limnopapers --interactive --ignore_all
+	feedpapers --interactive --ignore_all
 
 # pytest test_foo.py
 test:
@@ -17,7 +17,7 @@ install:
 	pip install --upgrade -e .
 
 keywords:
-	git pull && git add limnopapers/keywords.csv && git commit -m "stash keywords [skip ci]" && git push
+	git pull && git add keywords.csv && git commit -m "stash keywords [skip ci]" && git push
 
 log:
 	git pull && git add log.csv && git commit -m "stash log [skip ci]" && git push

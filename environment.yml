@@ -1,4 +1,4 @@
-name: limnopapers
+name: feedpapers
 channels:
 - conda-forge
 dependencies:
