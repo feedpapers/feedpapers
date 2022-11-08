@@ -1,6 +1,5 @@
-include LICENSE README.md feedpapers/journals.csv feedpapers/keywords.csv
+include README.md
 exclude MANIFEST.in
 exclude README_footer.md README_header.md
-exclude log.csv build_dashboard.py
-exclude .travis.yml
+exclude log.csv build_dashboard.py keywords.csv journals.csv
 exclude scratch

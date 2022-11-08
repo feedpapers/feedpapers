@@ -55,6 +55,10 @@ Install these to the activated environment with:
 
 `pip install -r requirements.txt`
 
+or
+
+`conda env create -f environment.yml`
+
 ## Contributing
 
 * Please help by adding missing journals to [feedpapers/journals.csv](feedpapers/journals.csv) or filing an [issue](https://github.com/jsta/feedpapers/issues)
