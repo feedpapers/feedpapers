@@ -61,9 +61,9 @@ or
 
 ## Contributing
 
-* Please help by adding missing journals to [feedpapers/journals.csv](feedpapers/journals.csv) or filing an [issue](https://github.com/jsta/feedpapers/issues)
+* Please help by adding missing journals to [journals.csv](journals.csv) or filing an [issue](https://github.com/jsta/feedpapers/issues)
 
-* Filtering keywords are located in [feedpapers/keywords.csv](feedpapers/keywords.csv).
+* Filtering keywords are located in [keywords.csv](keywords.csv).
 
 ## Prior art
 
