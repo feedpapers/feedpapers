@@ -1,6 +1,6 @@
 # feedpapers
 
-![pytest](https://github.com/jsta/feedpapers/workflows/pytest/badge.svg)
+[![pytest](https://github.com/feedpapers/feedpapers/actions/workflows/pytest.yml/badge.svg)](https://github.com/feedpapers/feedpapers/actions/workflows/pytest.yml)
 
 Code to monitor [journal RSS feeds](feedpapers/journals.csv) and [tweet](https://twitter.com/limno_papers) new articles.
 
